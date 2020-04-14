@@ -7,7 +7,7 @@ function Index() {
   return (
       <>
         <Template>
-            <h1>project started!</h1>
+            
         </Template>
       </>
   );
