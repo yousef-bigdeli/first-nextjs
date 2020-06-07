@@ -1,13 +1,32 @@
-import React from "react";
-import styles from "../styles/Header.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import React from 'react';
+import styles from '../styles/Header.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faSearch, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
     const [toggleMenu, setToggleMenu] = React.useState(false);
+    const [showSearch, setShowSearch] = React.useState(null);
+    const [showCloseButton, setShowCloseButton] = React.useState(null);
+
+    // responsive toggle menu for small screens
     const showToggleMenu = () => {
         setToggleMenu((prevToggleMenu) => !prevToggleMenu);
     };
+
+    // show or hide seach box
+    const searchButtonHandler = (e) => {
+        e.preventDefault();
+        if (showSearch === styles.open) {
+            searchFormSubmit();
+        } else {
+            setShowSearch(styles.open);
+            setShowCloseButton(styles.show);
+        }
+    };
+    const searchFormSubmit = () => {
+        return alert('ok');
+    };
+
     return (
         <>
             <div className={styles.header}>
@@ -20,16 +39,36 @@ const Header = () => {
                     </h1>
 
                     {/* search box section */}
-                    <form className={styles.searchBox}>
-                        <input
-                            type="text"
-                            name="search"
-                            placeholder="چی دوس داری؟"
-                            id={styles.searchInput}
-                        />
-                        <button type="submit">جستجو</button>
-                    </form>
-
+                    <div className={styles.searchBox}>
+                        <div className={styles.formContainer}>
+                            <form>
+                                <button
+                                    type="submit"
+                                    onClick={searchButtonHandler}
+                                >
+                                    <FontAwesomeIcon icon={faSearch} />
+                                </button>
+                                <input
+                                    type="text"
+                                    className={showSearch}
+                                    name="search"
+                                    placeholder="چی دوس داری؟"
+                                    id={styles.searchInput}
+                                />
+                            </form>
+                            <div
+                                className={`${styles.closeForm} ${showCloseButton}`}
+                                onClick={() => {
+                                    setShowSearch(styles.close);
+                                    setShowCloseButton(null);
+                                }}
+                            >
+                                <span>
+                                    <FontAwesomeIcon icon={faTimes} />
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                     {/* Toggle menu button */}
                     <div className={styles.navToggleMenu}>
                         <button
@@ -72,7 +111,7 @@ const Header = () => {
             {/* togle menu section */}
             <div
                 className={styles.toggleMenu}
-                style={toggleMenu ? {display: 'flex'} : {display: 'none'}}
+                style={toggleMenu ? { display: 'flex' } : { display: 'none' }}
             >
                 <ul>
                     <li>
@@ -108,8 +147,6 @@ const Header = () => {
                     </li>
                 </ul>
             </div>
-            
-            
         </>
     );
 };

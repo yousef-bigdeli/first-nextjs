@@ -52,28 +52,53 @@ $primary-color: #3fc58d;
     flex: 2;
     align-items: center;
     justify-content: flex-end;
-    margin-left: 10px;
+    .formContainer{
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+    }
     #searchInput {
-        width: 70%;
-        border: 1px solid #dedede;
+        width: 0;
         height: 40px;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        padding: 0 5px;
+        // padding: 0 5px;
+        border:0;
+        
+    }
+    #searchInput:focus {
+        outline: none;
     }
     button {
         height: 40px;
-        width: 60px;
-        background-color: $primary-color;
-        border: 0;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
+        width: 40px;
+        background-color: #fff;
+        border:0;
         cursor: pointer;
+        border-radius: 5px;
     }
     button:hover {
-        background-color: $font-color;
+        background-color: #dcdbdb;
+    }
+    button:focus{
+        outline: 0;
+    }
+    .closeForm{
+        display: flex;
+        align-items: center;
+        span{
+            display: none;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            color: #ababab;
+            cursor: pointer;
+        }
+        span:hover{
+            color: #000;
+        }
     }
 }
+
 .menu__container {
     height: 50px;
     background-color: #e7e7e7;
@@ -125,5 +150,72 @@ $primary-color: #3fc58d;
                 padding: 0 5px;
             }
         }
+    }
+}
+
+.open{
+    -webkit-animation: open 1.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation: open 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes open {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 400px;
+    }
+}
+@-webkit-keyframes open {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 400px;
+    }
+}
+.close{
+    -webkit-animation: close 1.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation: close 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes close {
+    0% {
+        width: 400px;
+    }
+    100% {
+        width: 0;
+    }
+}
+@-webkit-keyframes close {
+    0% {
+        width: 400px;
+    }
+    100% {
+        width: 0;
+    }
+}
+.show{
+    -webkit-animation: show 2.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation: show 2.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes show {
+    0% {
+        display: none;
+    }
+    100% {
+        display: flex;
+    }
+}
+@-webkit-keyframes show {
+    0% {
+        display: none;
+    }
+    100% {
+        display: flex;
     }
 }
