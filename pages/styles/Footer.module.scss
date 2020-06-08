@@ -1,0 +1,48 @@
+@import "./Media.module.scss";
+$font-color: #444;
+
+.footerContainer {
+    margin-top: 300px;
+    background-color: #5c626c;
+    width: 100%;
+    min-height: 300px;
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        line-height: 2;
+        color: #fff;
+        padding: 15px;
+        text-align: justify;
+        .footerTitles {
+            font-size: 1.5em;
+            width: 80%;
+            padding: 0 10px 10px 0;
+            border-bottom: 1px solid #ffffff30;
+            margin-bottom: 20px;
+        }
+        .aboutUs{
+            flex: 2;
+            p{
+                width: 80%;
+            }
+        }
+        .footerMenu{
+            flex: 1;
+            ul{
+                list-style: none;
+                margin: 0 15px;
+                padding: 0;
+                a{
+                    color: #fff;
+                }
+                a:hover{
+                    color: #b9b9b9;
+                }
+            }
+        }
+        .contactUs{
+            flex: 1;
+        }
+    }
+}
