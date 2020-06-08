@@ -5,8 +5,11 @@ import { faBars, faSearch, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
     const [toggleMenu, setToggleMenu] = React.useState(false);
-    const [showSearch, setShowSearch] = React.useState(null);
-    const [showCloseButton, setShowCloseButton] = React.useState(null);
+    const [showSearch, setShowSearch] = React.useState({
+        class: null,
+        isShow: false,
+    });
+    const [searchValue, setSearchValue] = React.useState('');
 
     // responsive toggle menu for small screens
     const showToggleMenu = () => {
@@ -16,15 +19,23 @@ const Header = () => {
     // show or hide seach box
     const searchButtonHandler = (e) => {
         e.preventDefault();
-        if (showSearch === styles.open) {
+        if (showSearch.isShow) {
             searchFormSubmit();
         } else {
-            setShowSearch(styles.open);
-            setShowCloseButton(styles.show);
+            setShowSearch({
+                class: styles.open,
+                isShow: true,
+            });
         }
     };
     const searchFormSubmit = () => {
         return alert('ok');
+    };
+
+    //search input value
+    const inputChangeHandler = (e) => {
+        setSearchValue(e.target.value);
+        console.log(searchValue);
     };
 
     return (
@@ -40,7 +51,11 @@ const Header = () => {
 
                     {/* search box section */}
                     <div className={styles.searchBox}>
-                        <div className={styles.formContainer}>
+                        <div
+                            className={`${styles.formContainer} ${
+                                showSearch.isShow ? styles.border : ''
+                            }`}
+                        >
                             <form>
                                 <button
                                     type="submit"
@@ -50,18 +65,26 @@ const Header = () => {
                                 </button>
                                 <input
                                     type="text"
-                                    className={showSearch}
+                                    className={showSearch.class}
+                                    onChange={inputChangeHandler}
                                     name="search"
                                     placeholder="چی دوس داری؟"
                                     id={styles.searchInput}
+                                    value={searchValue}
                                 />
                             </form>
                             <div
-                                className={`${styles.closeForm} ${showCloseButton}`}
-                                onClick={() => {
-                                    setShowSearch(styles.close);
-                                    setShowCloseButton(null);
-                                }}
+                                className={`${styles.closeForm} ${
+                                    showSearch.isShow ? styles.active : ''
+                                }`}
+                                onClick={() =>
+                                    searchValue === ''
+                                        ? setShowSearch({
+                                              class: styles.close,
+                                              isShow: false,
+                                          })
+                                        : setSearchValue('')
+                                }
                             >
                                 <span>
                                     <FontAwesomeIcon icon={faTimes} />

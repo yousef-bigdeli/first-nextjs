@@ -56,13 +56,21 @@ $primary-color: #3fc58d;
         display: flex;
         align-items: center;
         border-radius: 5px;
+        padding: 2px;
+        border-width: 0;
+        border-style: solid;
+        border-color: #e0e0e0;
+        transition: border-width 1.5s linear;
+    }
+    .border{
+        border-width: 1px;
     }
     #searchInput {
         width: 0;
         height: 40px;
-        // padding: 0 5px;
+        overflow: hidden;
         border:0;
-        
+        padding: 0;
     }
     #searchInput:focus {
         outline: none;
@@ -70,22 +78,24 @@ $primary-color: #3fc58d;
     button {
         height: 40px;
         width: 40px;
-        background-color: #fff;
+        color: $font-color;
         border:0;
         cursor: pointer;
-        border-radius: 5px;
+        background-color: #fff;
     }
     button:hover {
-        background-color: #dcdbdb;
+        color: $primary-color;
     }
     button:focus{
         outline: 0;
     }
     .closeForm{
-        display: flex;
         align-items: center;
+        transition: width 1.2s;
+        width: 0;
+        overflow: hidden;
         span{
-            display: none;
+            display: flex;
             width: 40px;
             height: 40px;
             align-items: center;
@@ -97,8 +107,10 @@ $primary-color: #3fc58d;
             color: #000;
         }
     }
+    .active{
+        width: 40px;
+    }
 }
-
 .menu__container {
     height: 50px;
     background-color: #e7e7e7;
@@ -164,7 +176,7 @@ $primary-color: #3fc58d;
         width: 0;
     }
     100% {
-        width: 400px;
+        width: 300px;
     }
 }
 @-webkit-keyframes open {
@@ -172,7 +184,7 @@ $primary-color: #3fc58d;
         width: 0;
     }
     100% {
-        width: 400px;
+        width: 300px;
     }
 }
 .close{
@@ -183,7 +195,7 @@ $primary-color: #3fc58d;
 }
 @keyframes close {
     0% {
-        width: 400px;
+        width: 300px;
     }
     100% {
         width: 0;
@@ -191,31 +203,9 @@ $primary-color: #3fc58d;
 }
 @-webkit-keyframes close {
     0% {
-        width: 400px;
+        width: 300px;
     }
     100% {
         width: 0;
-    }
-}
-.show{
-    -webkit-animation: show 2.5s;
-    -webkit-animation-fill-mode: forwards;
-    animation: show 2.5s;
-    animation-fill-mode: forwards;
-}
-@keyframes show {
-    0% {
-        display: none;
-    }
-    100% {
-        display: flex;
-    }
-}
-@-webkit-keyframes show {
-    0% {
-        display: none;
-    }
-    100% {
-        display: flex;
     }
 }
