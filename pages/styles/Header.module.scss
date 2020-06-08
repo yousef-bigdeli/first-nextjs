@@ -8,7 +8,7 @@ $primary-color: #3fc58d;
 }
 
 .nav {
-    height: 100px;
+    height: 60px;
     display: flex;
     padding: 0 30px;
     .title {
@@ -16,7 +16,7 @@ $primary-color: #3fc58d;
         display: flex;
         align-items: center;
         a {
-            font-size: 100%;
+            font-size: 70%;
         }
     }
     span {
@@ -82,9 +82,17 @@ $primary-color: #3fc58d;
         border:0;
         cursor: pointer;
         background-color: #fff;
+        margin-left: 3px;
     }
     button:hover {
         color: $primary-color;
+    }
+    .searchButtonHover:hover{
+        color: #000;
+        background-color: #b9b9b9;
+        // border-top-right-radius: 5px;
+        // border-bottom-right-radius: 5px;
+        border-radius: 5px;
     }
     button:focus{
         outline: 0;
@@ -112,8 +120,8 @@ $primary-color: #3fc58d;
     }
 }
 .menu__container {
-    height: 50px;
-    background-color: #e7e7e7;
+    height: 40px;
+    background-color: #5c626c;
     display: flex;
     align-items: center;
     .headerMenu {
@@ -129,12 +137,15 @@ $primary-color: #3fc58d;
             height: 100%;
             display: flex;
             align-items: center;
-            justify-content: center;
             text-decoration: none;
+            .menuLinks{
+                color: #fff;
+            }
+            .menuLinks:hover{
+                color: #b9b9b9;
+            }
         }
-        li:hover {
-            background-color: #dadada;
-        }
+        
     }
 }
 .toggleMenu {

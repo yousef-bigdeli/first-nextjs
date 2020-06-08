@@ -60,6 +60,7 @@ const Header = () => {
                                 <button
                                     type="submit"
                                     onClick={searchButtonHandler}
+                                    className={showSearch.isShow ? styles.searchButtonHover : ''}
                                 >
                                     <FontAwesomeIcon icon={faSearch} />
                                 </button>
@@ -113,19 +114,19 @@ const Header = () => {
                 <div className={styles.menu__container}>
                     <ul className={`${styles.headerMenu} ${styles.container}`}>
                         <li>
-                            <a href="/">صفحه اصلی</a>
+                            <a href="/" className={styles.menuLinks}>صفحه اصلی</a>
                         </li>
                         <li>
-                            <a href="/">اخبار</a>
+                            <a href="/" className={styles.menuLinks}>اخبار</a>
                         </li>
                         <li>
-                            <a href="/">وبلاگ</a>
+                            <a href="/" className={styles.menuLinks}>وبلاگ</a>
                         </li>
                         <li>
-                            <a href="/">درباره ما</a>
+                            <a href="/" className={styles.menuLinks}>درباره ما</a>
                         </li>
                         <li>
-                            <a href="/">تماس با ما</a>
+                            <a href="/" className={styles.menuLinks}>تماس با ما</a>
                         </li>
                     </ul>
                 </div>
