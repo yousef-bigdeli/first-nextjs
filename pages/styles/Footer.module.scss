@@ -1,4 +1,4 @@
-@import "./Media.module.scss";
+@import './Media.module.scss';
 $font-color: #444;
 
 .footerContainer {
@@ -21,28 +21,51 @@ $font-color: #444;
             border-bottom: 1px solid #ffffff30;
             margin-bottom: 20px;
         }
-        .aboutUs{
+        .aboutUs {
             flex: 2;
-            p{
+            p {
                 width: 80%;
             }
         }
-        .footerMenu{
+        .footerMenu {
             flex: 1;
-            ul{
+            ul {
                 list-style: none;
                 margin: 0 15px;
                 padding: 0;
-                a{
+                a {
                     color: #fff;
                 }
-                a:hover{
+                a:hover {
                     color: #b9b9b9;
                 }
             }
         }
-        .contactUs{
+        .contactUs {
             flex: 1;
+        }
+    }
+}
+.footerContactItems{
+    padding: 0 5px;
+    span{
+        display: inline-block;
+        direction: ltr;
+    }
+}
+.footerBottom {
+    background-color: #373d44;
+    color: #fff;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    .footerIcons {
+        font-size: 13pt;
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+        a{
+            color: #fff;
         }
     }
 }
