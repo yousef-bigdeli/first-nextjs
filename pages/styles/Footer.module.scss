@@ -1,5 +1,35 @@
-@import './Media.module.scss';
 $font-color: #444;
+@media screen and (max-width: 56.2em) {
+    // 899px
+    .aboutUs{
+        display: none !important;
+    }
+    .footerBottom{
+        flex-direction: column !important;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 39.95em) {
+    // 639px
+    .footerTitles{
+        font-size: 1.3em !important;
+    }
+    .footerBottom{
+        font-size: .7em !important;
+    }
+}
+@media screen and (max-width: 25em) {
+    // 400px
+    .footer{
+        font-size: .9em !important;
+    }
+    .footerTitles{
+        font-size: 1em !important;
+    }
+    .footerBottom{
+        font-size: .6em !important;
+    }
+}
 
 .footerContainer {
     margin-top: 300px;
