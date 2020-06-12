@@ -138,8 +138,10 @@ $primary-color: #3fc58d;
             display: flex;
             align-items: center;
             text-decoration: none;
+            text-align: center;
             .menuLinks{
                 color: #fff;
+                width: 100%;
             }
             .menuLinks:hover{
                 color: #b9b9b9;
