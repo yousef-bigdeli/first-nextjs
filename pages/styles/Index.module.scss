@@ -1,22 +1,91 @@
-.latestPost{
+$font-color: #444;
+$primary-color: #3fc58d;
+@import "./Media.module.scss";
+
+.articlesContainer{
+    width: 80%;
+    margin: 0 auto;
+}
+.articlesHead{
     width: 100%;
+    border-bottom: 1px solid #e9e9e9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     .title{
-        width: 100%;
-        text-align: center;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-bottom: 3px solid $primary-color;
+        padding: 15px;
     }
-    .carousel{
-
-        .carousel__controls{
-
-            .controls__button{
-
-            }
-        }
-        .carousel__wrapper{
-
-            .carousel__item{
-
-            }
+    a{
+        color: #2980b9;
+        font-weight: 500;
+    }
+    a:hover{
+        opacity: .8;
+    }
+}
+.articles{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.article{
+    box-shadow: 0 1px 0 rgba(0,0,0,.08);
+    border-radius: 15px;
+    background-color: #fff;
+    footer{
+        padding: 10px;
+        display: flex;
+    }
+}
+.fa-eye:after{
+    opacity: .4;
+}
+.articleImage{
+    width: 300px;
+    height: 200px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 100%;
+        transition: transform .5s;
+    }
+    img:hover{
+        transform: scale(1.1);
+    }
+}
+.articleContent{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    line-height: 2;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-top: -10px;
+    position: relative;
+    background-color: #fff;
+    .subject{
+        font-size: .8em;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .title{
+        font-size: 1.1em;
+        font-weight: 500;
+    }
+    .tags{
+        margin-top: 10px;
+        a{
+            font-size: .75em;
+            color: #999;
+            font-weight: 500;
+        }   
+        a:hover{
+            color: $font-color;
         }
     }
 }
