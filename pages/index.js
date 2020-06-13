@@ -23,25 +23,37 @@ function Index() {
                         </div>
                     </div>
                     <div className={styles.articles}>
-                      <div className={styles.article}>
-                        <article>
-                            <div className={styles.articleImage}>
-                                <a href="/">
-                                    <img src="/assets/images/banner1.jpg" />
-                                </a>
-                            </div>
-                            <div className={styles.articleContent}>
-                              <div className={styles.subject}><a href="/">موضوع</a></div>
-                              <div className={styles.title}><a href="/">متن مقاله</a></div>
-                              <div className={styles.tags}><a href="/">#تگ</a></div>
-                            </div>
-                            <footer>
-                                <FontAwesomeIcon icon={faHeart}/>
-                                <FontAwesomeIcon icon={faEye} className={styles.eye}/>
-                                <i className="far fa-heart"></i>
-                            </footer>
-                        </article>
-                      </div>
+                        <div className={styles.article}>
+                            <article>
+                                <div className={styles.articleImage}>
+                                    <a href="/">
+                                        <img src="/assets/images/banner1.jpg" />
+                                    </a>
+                                </div>
+                                <div className={styles.articleContent}>
+                                    <div className={styles.subject}>
+                                        <a href="/">موضوع</a>
+                                    </div>
+                                    <div className={styles.title}>
+                                        <a href="/">متن مقاله</a>
+                                    </div>
+                                    <div className={styles.tags}>
+                                        <a href="/">#تگ</a>
+                                    </div>
+                                </div>
+                                <footer>
+                                    <div>130</div>
+                                    <div className={styles.likes}>
+                                        <FontAwesomeIcon icon={faHeart} />
+                                    </div>
+                                    <div>135</div>
+                                    <div className={styles.view}>
+                                        <FontAwesomeIcon icon={faEye} />
+                                    </div>
+                                    <i className="far fa-heart"></i>
+                                </footer>
+                            </article>
+                        </div>
                     </div>
                 </div>
             </Template>

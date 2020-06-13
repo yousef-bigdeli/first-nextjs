@@ -3,8 +3,9 @@ $primary-color: #3fc58d;
 @import "./Media.module.scss";
 
 .articlesContainer{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+    max-width: 1500px;
 }
 .articlesHead{
     width: 100%;
@@ -29,6 +30,7 @@ $primary-color: #3fc58d;
 .articles{
     margin-top: 20px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 .article{
@@ -38,6 +40,9 @@ $primary-color: #3fc58d;
     footer{
         padding: 10px;
         display: flex;
+        div{
+            margin-right: 3px;
+        }
     }
 }
 .fa-eye:after{
@@ -53,7 +58,11 @@ $primary-color: #3fc58d;
         width: 100%;
         height: 100%;
         transition: transform .5s;
-    }
+        -webkit-transition: transform .5s;
+        -moz-transition: transform .5s;
+        -ms-transition: transform .5s;
+        -o-transition: transform .5s;
+}
     img:hover{
         transform: scale(1.1);
     }
@@ -78,7 +87,6 @@ $primary-color: #3fc58d;
         font-weight: 500;
     }
     .tags{
-        margin-top: 10px;
         a{
             font-size: .75em;
             color: #999;
@@ -88,4 +96,9 @@ $primary-color: #3fc58d;
             color: $font-color;
         }
     }
+}
+
+.likes:hover{
+    color: #ff0000;
+    cursor: pointer;
 }
