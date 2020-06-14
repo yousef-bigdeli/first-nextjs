@@ -63,27 +63,29 @@ const Footer = () => {
                 </div>
 
                 <div className={styles.footerBottom}>
-                    <span>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
-                        چاپ و با استفاده از طراحان گرافیک است.
-                    </span>
-                    <span className={styles.footerIcons}>
-                        <a href="/">
-                            <FontAwesomeIcon icon={faTelegramPlane} />
-                        </a>
-                        <a href="/">
-                            <FontAwesomeIcon icon={faTwitterSquare} />
-                        </a>
-                        <a href="/">
-                            <FontAwesomeIcon icon={faRssSquare} />
-                        </a>
-                        <a href="/">
-                            <FontAwesomeIcon icon={faInstagram} />
-                        </a>
-                        <a href="/">
-                            <FontAwesomeIcon icon={faFacebookSquare} />
-                        </a>
-                    </span>
+                    <div className={styles.container}>
+                        <span>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از
+                            صنعت چاپ و با استفاده از طراحان گرافیک است.
+                        </span>
+                        <span className={styles.footerIcons}>
+                            <a href="/">
+                                <FontAwesomeIcon icon={faTelegramPlane} />
+                            </a>
+                            <a href="/">
+                                <FontAwesomeIcon icon={faTwitterSquare} />
+                            </a>
+                            <a href="/">
+                                <FontAwesomeIcon icon={faRssSquare} />
+                            </a>
+                            <a href="/">
+                                <FontAwesomeIcon icon={faInstagram} />
+                            </a>
+                            <a href="/">
+                                <FontAwesomeIcon icon={faFacebookSquare} />
+                            </a>
+                        </span>
+                    </div>
                 </div>
             </footer>
         </>

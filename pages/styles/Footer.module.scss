@@ -1,4 +1,6 @@
 $font-color: #444;
+@import "./Media.module.scss";
+
 @media screen and (max-width: 56.2em) {
     // 899px
     .aboutUs{
@@ -87,8 +89,10 @@ $font-color: #444;
     background-color: #373d44;
     color: #fff;
     padding: 25px;
-    display: flex;
-    justify-content: space-between;
+    div{
+        display: flex;
+        justify-content: space-between;
+    }
     .footerIcons {
         font-size: 13pt;
         display: flex;
