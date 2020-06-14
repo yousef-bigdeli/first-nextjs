@@ -13,9 +13,8 @@ function Index() {
             <Template>
                 {/* Slider component*/}
                 <Slider />
-                {/*  */}
-
-                <div className={styles.articlesContainer}>
+                {/* articles */}
+                <div className={styles.container}>
                     <div className={styles.articlesHead}>
                         <div className={styles.title}>آخرین مقالات</div>
                         <div>
@@ -23,6 +22,7 @@ function Index() {
                         </div>
                     </div>
                     <div className={styles.articles}>
+                        {/* article box section */}
                         <div className={styles.article}>
                             <article>
                                 <div className={styles.articleImage}>
@@ -32,30 +32,41 @@ function Index() {
                                 </div>
                                 <div className={styles.articleContent}>
                                     <div className={styles.subject}>
+                                        {/* article subject */}
                                         <a href="/">موضوع</a>
                                     </div>
                                     <div className={styles.title}>
-                                        <a href="/">متن مقاله</a>
+                                        {/* article title */}
+                                        <a href="/">تیتر مقاله</a>
                                     </div>
                                     <div className={styles.tags}>
+                                        {/* tags */}
                                         <a href="/">#تگ</a>
                                     </div>
                                 </div>
                                 <footer>
+                                    {/* likes number value */}
                                     <div>130</div>
                                     <div className={styles.likes}>
+                                        {/* likes icon */}
                                         <FontAwesomeIcon icon={faHeart} />
                                     </div>
+                                    {/* views number value */}
                                     <div>135</div>
                                     <div className={styles.view}>
+                                        {/* views icon */}
                                         <FontAwesomeIcon icon={faEye} />
                                     </div>
-                                    <i className="far fa-heart"></i>
                                 </footer>
                             </article>
                         </div>
+
                     </div>
                 </div>
+
+                {/*  */}
+
+                
             </Template>
         </>
     );
