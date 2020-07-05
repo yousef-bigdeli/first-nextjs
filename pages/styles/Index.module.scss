@@ -16,11 +16,6 @@ $primary-color: #3fc58d;
             font-size: 1em !important;
         }
     }
-
-    .newsBox {
-        width: 25% !important;
-        margin: 10px !important;
-    }
     .newsContainer {
         margin: 30px auto !important;
     }
@@ -42,18 +37,7 @@ $primary-color: #3fc58d;
     }
     
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-    .newsBox {
-        width: 33% !important;
-        margin: 10px !important;
-    }
-}
-@media screen and (min-width: 600px) and (max-width: 767px){
-    .newsBox {
-        width: 50% !important;
-        margin: 10px !important;
-    }
-}
+
 // **** articles section
 
 .articlesHead {
@@ -185,18 +169,27 @@ $primary-color: #3fc58d;
 
 .news {
     width: 100%;
-    display: flex;
+    position: relative;
     background-color: #fff;
     border-top: 3px solid #3fc58d;
     padding-top: 10px;
+    height: 300px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .newsBox {
-    margin: 10px auto;
+    margin: 10px 7%;
     width: 80%;
     -webkit-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.8);
     -moz-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.8);
     box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    position: relative;
+    right: -90%;
+    left: 0;
+    transition: left 2s;
+    transition: right 2s;
 }
 
 .newsImage {
@@ -283,4 +276,38 @@ $primary-color: #3fc58d;
             box-shadow: inset 0px 0px 10px #9a9a9a;
         }
     }
+}
+
+//carousel animation andresponsive
+@media screen and (min-width: 1200px) {
+    .newsBox {
+        width: calc(25% - 20px) !important;
+        margin: 10px !important;
+        right: -25% !important;
+    }
+    .right{
+        right: -50% !important;
+        transition: right 1s;
+    }
+    .left{
+        right: 0 !important;
+    }
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .newsBox {
+        width: calc(33% - 20px) !important;
+        margin: 10px !important;
+        right: -33% !important;
+    }
+   
+}
+@media screen and (min-width: 600px) and (max-width: 767px){
+    .newsBox {
+        width: calc(50% - 20px) !important;
+        margin: 10px !important;
+        right: -50% !important;
+    }
+    
 }
