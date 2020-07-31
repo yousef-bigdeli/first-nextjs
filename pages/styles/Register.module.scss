@@ -1,0 +1,41 @@
+$font-color: #444;
+$primary-color: #3fc58d;
+@import "./Media.module.scss";
+
+.reg__container{
+    width: 50%;
+    margin: 50px auto;
+    .title{
+        text-align: center;
+        font-size: 2em;
+    }
+}
+.register__form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+
+    input{
+        margin: 5px 0;
+        height: 40px;
+        padding: 5px;
+        border: 1px solid #e5e5e5;
+    }
+    input:focus{
+        outline: 1px solid #ababab;
+    }
+    input[name="submit-register"]{
+        background-color: $primary-color;
+        border: 0;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 1.2em;
+    }
+    input[name="submit-register"]:focus{
+        outline: 0;
+    }
+    input[name="submit-register"]:hover{
+        background-color: #379c72;
+    }
+}
