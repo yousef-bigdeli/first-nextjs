@@ -105,7 +105,7 @@ const Header = () => {
 
                     {/* login and register buttons on header */}
                     <div className={styles.headerLogin}>
-                        <a href="/"> عضویت </a>
+                        <a href="/register"> عضویت </a>
                         <a href="/"> ورود </a>
                     </div>
                 </div>
