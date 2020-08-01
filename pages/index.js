@@ -63,7 +63,7 @@ function Index() {
         var b = [...initialNews];
         b.unshift(a);
         return b;
-    }
+    };
     const [news, setNews] = React.useState(setInitialNews());
     const [moveRight, setMoveRight] = React.useState(false);
     const right = () => {
@@ -72,7 +72,7 @@ function Index() {
         // b.unshift(a);
         // setNews(b);
         setMoveRight(true);
-        console.log(moveRight)
+        console.log(moveRight);
     };
     // const left = () => {
     //     var a = news.shift();
@@ -81,9 +81,7 @@ function Index() {
     //     setNews(b);
     // };
 
-    React.useEffect(() => {
-        
-    })
+    React.useEffect(() => {});
 
     return (
         <>
@@ -148,7 +146,11 @@ function Index() {
                     <div className={styles.news}>
                         {news.map((n, i) => {
                             return (
-                                <div className={`${styles.newsBox} ${moveRight ? styles.left :''}`}>
+                                <div
+                                    className={`${styles.newsBox} ${
+                                        moveRight ? styles.left : ''
+                                    }`}
+                                >
                                     <article>
                                         <div className={styles.newsImage}>
                                             <a href="/">
@@ -186,7 +188,7 @@ function Index() {
                             <span className={styles.right} onClick={right}>
                                 &#10094;
                             </span>
-                            <span className={styles.left} >&#10095;</span>
+                            <span className={styles.left}>&#10095;</span>
                         </div>
                     </div>
                 </div>
