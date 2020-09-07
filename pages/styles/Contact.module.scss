@@ -1,0 +1,32 @@
+$font-color: #444;
+$primary-color: #3fc58d;
+@import "./Media.module.scss";
+
+.contact__container{
+
+    .form__title{
+        width: 98%;
+        margin: 20px auto;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+}
+.contact__form{
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    width: 98%;
+    margin: 0 auto;
+    padding: 40px;
+    .email{
+        margin-right: 10px;
+    }
+}
+.flex__row{
+    display: flex;
+    flex-direction: row;
+}
+.flex__column{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
