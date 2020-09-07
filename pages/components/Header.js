@@ -106,7 +106,7 @@ const Header = () => {
                     {/* login and register buttons on header */}
                     <div className={styles.headerLogin}>
                         <a href="/register"> عضویت </a>
-                        <a href="/"> ورود </a>
+                        <a href="/login"> ورود </a>
                     </div>
                 </div>
 
@@ -126,7 +126,7 @@ const Header = () => {
                             <a href="/" className={styles.menuLinks}>درباره ما</a>
                         </li>
                         <li>
-                            <a href="/" className={styles.menuLinks}>تماس با ما</a>
+                            <a href="/contact-us" className={styles.menuLinks}>تماس با ما</a>
                         </li>
                     </ul>
                 </div>
@@ -161,13 +161,13 @@ const Header = () => {
                         <a href="/">درباره ما</a>
                     </li>
                     <li>
-                        <a href="/">تماس با ما</a>
+                        <a href="/contact-us">تماس با ما</a>
                     </li>
                     <li>
-                        <a href="/">ورود</a>
+                        <a href="/login">ورود</a>
                     </li>
                     <li>
-                        <a href="/">عضویت</a>
+                        <a href="/register">عضویت</a>
                     </li>
                 </ul>
             </div>
