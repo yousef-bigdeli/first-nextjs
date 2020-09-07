@@ -39,3 +39,17 @@ $primary-color: #3fc58d;
         background-color: #379c72;
     }
 }
+.remember__check{
+    display: flex;
+    align-items: center;
+    label{
+        margin-right: 5px;
+        cursor: pointer;
+    }
+    input[type="checkbox"]{
+        cursor: pointer;
+    }
+    input[type="checkbox"]:focus{
+        outline: 0;
+    }
+}
